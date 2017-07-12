@@ -26,6 +26,10 @@ public class CrimeLab {
         mCrimes.add(c);
     }
 
+    public void removeCrime(Crime c){
+        mCrimes.remove(c);
+    }
+
     public List<Crime> getCrimes() {
         return mCrimes;
     }
@@ -37,5 +41,9 @@ public class CrimeLab {
             }
         }
         return null;
+    }
+
+    public UUID getFirst(){
+        return mCrimes.isEmpty() ? null : mCrimes.get(0).getId();
     }
 }
